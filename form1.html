@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <title>Document</title>
+</head>
+<body>
+  <p style="font-size: 40px;" >Nhấn nút Bắt Đầu hoặc dừng </p>
+  <form>
+<div class="a4">
+  <input style="padding: 20px 25px;" class ="text"type="text" placeholder="nhập thử Trân dễ thương đi"/>
+  <input class="OK" type="button" onclick="chich();" name="btn_ok" value="Bắt Đầu" />
+  <input class="Reset" type="button" onclick=kick(); name="btn_reset" value="Dừng"/>
+  <audio controls >
+    <source src="https://public.ch.files.1drv.com/y4mPK_hY8vzCO8gosGpelyHnCRC-vhJa9xqoQw9BVININu3k-L8EHUaTq4AsmTLHAgD5qypJ6ZVglAmEFPn2rL_OHeyorBGiHqKz1k5_m0VSC5htgmWbAKBalWrG5o5GSl5UNI5m5r5gw7ILMZhvU7p8jlv_ce5B9pPi-TDfRFEphtLKbzBPgwTTYIUJyjNWoGiA-MRxAHgZIAHaJQwfF6q4ZKvwmw9q_Vr6rb74I62uwQ?" type="audio/mpeg">
+  Nhạc
+  </audio>
+</form>
+</div>
+
+    <div id="e3">
+    </div>
+    <div id="e4"> </div>
+<style>
+  p {
+  color: blue;
+}
+.a4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.OK {
+  padding: 20px;
+  margin: 0 auto;
+}
+.Reset {
+  padding: 20px;
+  margin: 0 auto;
+}
+p {
+  text-align: center;
+}
+body {
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  color: red;
+}
+#e3 , #e4 {
+  text-align: center;
+}
+
+</style>
+  <script>
+var myVar;
+ function chich() {
+  var b =document.getElementById("e3");
+  var ba = document.querySelector(".text").value;
+  if(ba=="Trân dễ thương" ||ba=="trân dễ thương" ){
+    var h2 = document.createElement("h2")
+  h2.innerHTML = "Bớt ảo tưởng";
+  b.appendChild(h2);
+  }
+   myVar = setInterval(function anh() {
+    var clos = document.getElementsByClassName("log-in");
+    var b =document.getElementById("e3");
+    var h1 = document.createElement("h1")
+    for (let i = 0; i < 1000;++i ) {
+      h1.innerHTML = "Trân Khùng, Trân Điên, Đỉ Trân Khùng";
+      b.appendChild(h1)
+      var img = new Image();
+   var div = document.getElementById('e3');
+  img.onload = function() {
+  div.appendChild(img);
+  if(i==1000 ){
+    clearInterval(myVar);
+  }
+  };
+img.src = 'https://pic.tuvingaynay.com/maquylagi.jpg';
+  }},1000);
+ }
+ function kick() {
+  clearInterval(myVar);
+    var child = document.getElementById("e3");
+    child.parentNode.removeChild(child);
+    var div = document.getElementById('e4');
+      var img = new Image();
+  img.onload = function() {
+  div.appendChild(img);
+};
+img.src = 'https://thiepnhanai.com/wp-content/uploads/2021/05/hinh-anh-hai-huoc-vui-7.jpg';
+  // var bc =document.querySelector('.OK');
+  // document.bc.style.backgroundColor = 'red';
+
+}
+  </script>
+</body>
+</html>
